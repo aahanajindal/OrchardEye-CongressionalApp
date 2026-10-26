@@ -1,0 +1,158 @@
+========================================
+ORCHARDEYE — APP STORE CONNECT SUBMISSION
+========================================
+(Paste each block into the matching field. Char limits noted. Fill [BRACKETS].)
+
+
+APP NAME  (max 30)
+------------------------------------------
+OrchardEye
+
+
+SUBTITLE  (max 30)
+------------------------------------------
+Scan your trees on device
+
+
+PROMOTIONAL TEXT  (max 170 — editable anytime without review)
+------------------------------------------
+One photo, two answers: is the leaf diseased, is the fruit ripe? Runs fully on device — no sensor, no login. Now with an approximate apple count.
+
+
+KEYWORDS  (max 100, comma-separated, no spaces after commas)
+------------------------------------------
+apple,orchard,leaf,disease,scab,rust,blackrot,ripeness,fruit,scan,crop,plant,farm,harvest,scout
+
+
+DESCRIPTION  (max 4000)
+------------------------------------------
+OrchardEye — scan your trees, right on your iPhone.
+
+Point your camera at an apple leaf or a piece of fruit and get two answers from one photo:
+
+• Disease — flags apple scab, black rot, cedar apple rust, or a healthy leaf, with a confidence score and what to do next.
+• Ripeness — estimates how ready your fruit is from its colour, plus an approximate apple count for the frame.
+
+Everything runs on device. Your photos are analysed locally and are never uploaded. No account, no clip-on sensor, no subscription.
+
+WHAT YOU GET
+• One-tap scan from the camera or your photo library
+• A plain-language verdict you can hear read aloud
+• Crop-health signals: lesion area, yellowing, lifecycle stage
+• Per-plant history and trend charts (health, lesion %, ripeness)
+• CSV export of every scan
+• Weather-aware disease-risk tips (Open-Meteo)
+
+HOW IT WORKS
+Photograph a leaf to screen for disease, or a piece of fruit to check ripeness and count. OrchardEye works out which you're looking at and shows the answer that applies. Scan the same block twice to build a trend over time.
+
+HONEST BY DESIGN
+Ripeness is a colour-based estimate, not a lab Brix reading. Disease coverage is apple (scab, black rot, cedar apple rust, healthy), and confidence is shown so you know when to retake a photo.
+
+No sign-in. No ads. Nothing leaves your phone.
+
+
+WHAT'S NEW  (version notes — max 4000)
+------------------------------------------
+Version 1.0
+First release. On-device apple disease detection and colour-based ripeness, an approximate apple count, per-plant trends, CSV export, and spoken guidance. Everything runs locally — no account, no sensor.
+
+
+PROMOTIONAL / SCREENSHOT CAPTIONS  (optional, per screenshot)
+------------------------------------------
+1. One photo. Two answers.
+2. Spot disease — scab, black rot, rust.
+3. Check ripeness from colour.
+4. Count the apples in frame.
+5. Track every block over time.
+6. All on device. Nothing uploaded.
+
+
+========================================
+APP INFORMATION
+========================================
+
+PRIMARY CATEGORY:    Utilities
+SECONDARY CATEGORY:  Education
+CONTENT / AGE RATING: 4+  (no objectionable content)
+
+PRICE:               Free
+IN-APP PURCHASES:    None
+
+COPYRIGHT:           2026 Aranyo Ray
+BUNDLE ID:           com.orchardeye.OrchardEye
+SKU:                 orchardeye-001
+PRIMARY LANGUAGE:    English (U.S.)
+
+
+========================================
+URLS  (LIVE)
+========================================
+
+SUPPORT URL:         https://orchardeye-app.vercel.app/support     ← REQUIRED
+MARKETING URL:       https://orchardeye-app.vercel.app             ← optional
+PRIVACY POLICY URL:  https://orchardeye-app.vercel.app/privacy     ← REQUIRED
+
+(Live on Vercel, latest copy pushed to main. Source: ~/Downloads/orchardeyeweb.
+If you later add the orchardeye.app custom domain, update these URLs +
+metadataBase in app/layout.tsx.)
+
+Privacy policy must state: all image analysis is on-device; photos are not
+uploaded or shared; only anonymous weather (lat/long → Open-Meteo) is fetched;
+scans are stored locally and exportable by the user.
+
+
+========================================
+APP PRIVACY  (Data Collection questionnaire)
+========================================
+
+Data collected:      NONE
+- Photos:            processed on device, NOT collected, NOT linked to user.
+- Location:          NOT collected (weather uses a fixed regional default; no GPS).
+- Identifiers/usage: NONE.
+Answer "No, we do not collect data from this app."
+
+Required-reason APIs (declared in PrivacyInfo.xcprivacy):
+- UserDefaults      — reason CA92.1
+- File timestamp    — reason C617.1
+
+
+========================================
+EXPORT COMPLIANCE
+========================================
+Uses non-exempt encryption:  NO
+(ITSAppUsesNonExemptEncryption = NO is already set in Info.plist.)
+
+
+========================================
+APP REVIEW INFORMATION
+========================================
+
+SIGN-IN REQUIRED:    No (no account of any kind)
+DEMO ACCOUNT:        Not applicable
+
+CONTACT:             Aranyo Ray / aranyoray@gmail.com / [phone optional]
+
+REVIEW NOTES:
+OrchardEye is a fully on-device apple orchard scanner — no login, no backend,
+no data collection. To test without hardware:
+1. Open the Scan tab.
+2. Tap "Choose photo" and pick any apple leaf or fruit image, OR tap
+   "Sample: healthy" / "Sample: diseased" to run the full flow on a generated image.
+3. You'll get a disease or ripeness verdict; tap "See verdict" for the fused result,
+   which can be read aloud, saved, and exported as CSV from History.
+The only network call is anonymous weather (Open-Meteo, key-less); the app works
+fully offline with a cached fallback. Disease coverage is apple; ripeness and the
+apple count are colour-based estimates, labelled as such in-app.
+
+
+========================================
+CHECKLIST BEFORE SUBMIT
+========================================
+[x] Support + Privacy Policy URLs live (pushed to Vercel)
+[x] 1024×1024 app icon present (AppIcon.png)
+[ ] Screenshots: 6.9" iPhone (required) + 6.5"/5.5" if supporting older; iPad if universal
+[ ] Signing team set (Signing & Capabilities)
+[ ] Version 1.0 / Build number set
+[ ] Archive → validate → upload via Xcode Organizer
+[ ] Decide iPad: keep universal (TARGETED_DEVICE_FAMILY 1,2) or set to iPhone-only (1)

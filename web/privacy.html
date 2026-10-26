@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy · OrchardEye</title>
+  <meta name="description" content="How OrchardEye handles your data. Scans are analyzed on-device, nothing is sold, and every permission (camera, Bluetooth, location) is explained in plain language." />
+  <meta name="theme-color" content="#0f2417" />
+  <meta name="robots" content="index, follow" />
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;450;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+  <!-- ───────────────────────── Nav ───────────────────────── -->
+  <header class="nav" id="nav">
+    <a class="nav__brand" href="index.html#top" aria-label="OrchardEye home">
+      <span class="mark" aria-hidden="true">
+        <svg viewBox="0 0 32 32" width="28" height="28">
+          <circle cx="16" cy="17" r="10" fill="var(--leaf)"/>
+          <circle cx="16" cy="17" r="10" fill="url(#g)" opacity=".35"/>
+          <path d="M16 7c1-3 4-4 6-4-1 3-3 4-6 4z" fill="var(--leaf-600)"/>
+          <circle cx="16" cy="17" r="4.2" fill="#0f2417"/>
+          <circle cx="16" cy="17" r="1.8" fill="var(--ripe)"/>
+          <defs><radialGradient id="g" cx=".35" cy=".3"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient></defs>
+        </svg>
+      </span>
+      <span class="nav__name">Orchard<b>Eye</b></span>
+    </a>
+    <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navmenu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav__links" id="navmenu" aria-label="Primary">
+      <a href="index.html#how">How it works</a>
+      <a href="index.html#features">Sensors</a>
+      <a href="support.html">Support</a>
+    </nav>
+    <a href="index.html#pilot" class="btn btn--sm btn--solid nav__cta">Join the pilot</a>
+  </header>
+
+  <main id="top">
+    <article class="legal">
+      <span class="legal__eyebrow">Privacy Policy</span>
+      <h1>Your orchard data stays yours.</h1>
+      <p class="legal__meta">Last updated: 22 July 2026 · Effective for all versions of the OrchardEye iOS app.</p>
+      <p class="legal__lede">OrchardEye is built to work offline, in the field, on your device. Every scan is analyzed on the phone in your hand — we don't run accounts, we don't build advertising profiles, and we never sell your data. This policy explains exactly what the app touches and why.</p>
+
+      <h2>The short version</h2>
+      <ul>
+        <li><strong>Scans are processed on-device.</strong> Photos and spectral readings are analyzed locally to produce a verdict. They are not uploaded to us.</li>
+        <li><strong>No account, no login.</strong> OrchardEye works without you creating an account or giving us your name.</li>
+        <li><strong>No ads, no tracking, no data sales.</strong> We use no third-party advertising or analytics SDKs.</li>
+        <li><strong>You control the permissions.</strong> Camera, Bluetooth, and location are each requested only when a feature needs them, and the app still functions if you decline optional ones.</li>
+      </ul>
+
+      <h2>Why we ask for each permission</h2>
+      <p>Apple requires apps to state a clear reason for every permission. Here is ours, in plain language.</p>
+
+      <div class="perm">
+        <p class="perm__head">📷 Camera <span class="perm__tag">Required to scan</span></p>
+        <p>OrchardEye's core job is to look at an apple or a leaf and read its color, greenness, and lesions. The camera captures that image so the on-device vision model can spot disease and assess condition. <strong>Images are analyzed on your phone and are not sent to our servers.</strong> You can save a scan to your local history, but that stays on the device unless you choose to share it.</p>
+      </div>
+
+      <div class="perm">
+        <p class="perm__head">📶 Bluetooth <span class="perm__tag">Required for the sensor</span></p>
+        <p>The optional OrchardEye hardware — a low-cost near-infrared (NIR) spectral sensor on an ESP32 bridge — connects over Bluetooth Low Energy to report ripeness and Brix readings. Bluetooth is used <strong>only</strong> to pair with and read from that sensor. We do not use Bluetooth to track your location or scan for nearby devices for any other purpose.</p>
+      </div>
+
+      <div class="perm">
+        <p class="perm__head">📍 Location <span class="perm__tag perm__tag--opt">Optional</span></p>
+        <p>If you allow it, OrchardEye uses your approximate location to fetch <strong>local weather</strong> (temperature, humidity, recent rain) from a public weather service. Weather helps the app give better spray-timing and disease-pressure guidance for your orchard. If you decline, nothing breaks — the app falls back to a central-Washington default and cached data, and scanning works fully offline. We do not store a location history or share your location with anyone.</p>
+      </div>
+
+      <div class="perm">
+        <p class="perm__head">🔊 Speech &amp; audio output <span class="perm__tag perm__tag--opt">On by default</span></p>
+        <p>OrchardEye can read the verdict aloud so you can keep your hands on the fruit and eyes on the tree. This uses the phone's built-in text-to-speech and plays through your speaker. <strong>It does not use the microphone</strong> and records no audio.</p>
+      </div>
+
+      <h2>What data the app handles</h2>
+      <table class="datatable">
+        <thead>
+          <tr><th>Data</th><th>Where it lives</th><th>Why</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Scan photos &amp; results</td><td>On your device (local history)</td><td>So you can review past scans and trends over the season.</td></tr>
+          <tr><td>Spectral sensor readings</td><td>On your device</td><td>Fused with the image to produce a ripeness/Brix verdict.</td></tr>
+          <tr><td>Approximate location</td><td>Sent to weather service, not stored by us</td><td>To look up current local weather. Coordinates aren't retained.</td></tr>
+          <tr><td>App settings</td><td>On your device</td><td>Remembers your preferences (voice on/off, units, etc.).</td></tr>
+        </tbody>
+      </table>
+
+      <h2>Third-party services</h2>
+      <p>OrchardEye makes one kind of outbound request: an <strong>anonymous call to a public weather API</strong> (Open-Meteo) to retrieve conditions for your area. No personal identifiers, scan images, or account data are included in that request. The app ships with no advertising, analytics, or crash-reporting SDKs.</p>
+
+      <h2>Children's privacy</h2>
+      <p>OrchardEye is a tool for growers and is not directed at children under 13. We do not knowingly collect personal information from children.</p>
+
+      <h2>Data retention &amp; deletion</h2>
+      <p>Because your scans and settings live on your device, you are in control. Deleting a scan from the in-app history removes it, and deleting the app removes all of its local data. We hold no server-side copy of your scans to delete.</p>
+
+      <h2>Your rights</h2>
+      <p>Depending on where you live (for example under the GDPR or CCPA), you may have rights to access, correct, or delete personal data. Since OrchardEye keeps your data on your own device and we don't hold a copy, you can exercise most of these rights directly in the app. For anything else, contact us and we'll help.</p>
+
+      <h2>Changes to this policy</h2>
+      <p>If we change how the app handles data, we'll update this page and revise the "last updated" date above. Material changes will be noted in the app's release notes.</p>
+
+      <div class="legal__contact">
+        <h2>Questions?</h2>
+        <p>Reach us any time at <a href="mailto:ruchiagrawal9221@gmail.com">ruchiagrawal9221@gmail.com</a>. We aim to reply within two business days.</p>
+      </div>
+
+      <a class="legal__back" href="index.html">← Back to OrchardEye</a>
+    </article>
+  </main>
+
+  <!-- ───────────────────────── Footer ───────────────────────── -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <span class="nav__name">Orchard<b>Eye</b></span>
+        <p>A dual-sensor apple health &amp; quality scanner for Washington's 8th Congressional District.</p>
+      </div>
+      <nav class="footer__links" aria-label="Footer">
+        <a href="index.html#how">How it works</a>
+        <a href="index.html#features">Sensors</a>
+        <a href="support.html">Support</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="https://github.com/aranyoray/OrchardEye">GitHub</a>
+      </nav>
+    </div>
+    <p class="footer__fine">OrchardEye © 2026 · Built for the Congressional App Challenge (WA-08). Contact: <a href="mailto:ruchiagrawal9221@gmail.com">ruchiagrawal9221@gmail.com</a></p>
+  </footer>
+
+  <script src="main.js" defer></script>
+</body>
+</html>

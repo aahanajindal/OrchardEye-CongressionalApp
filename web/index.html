@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OrchardEye: One scan. Two answers.</title>
+  <meta name="description" content="OrchardEye is a dual-sensor apple scanner: on-device computer vision spots disease while a low-cost NIR sensor reads ripeness and Brix. Both fuse into one plain-language verdict, spoken aloud, offline, on sub-$130 hardware. Built for Washington's 8th District growers." />
+  <meta name="theme-color" content="#0f2417" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="OrchardEye: One scan. Two answers." />
+  <meta property="og:description" content="A dual-sensor apple health & quality scanner. Disease + ripeness in one offline verdict, on sub-$130 hardware." />
+  <meta property="og:image" content="og-image.svg" />
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;450;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Set .js before paint so scroll-reveal only hides content when JS can reveal it. -->
+  <script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+  <!-- ───────────────────────── Nav ───────────────────────── -->
+  <header class="nav" id="nav">
+    <a class="nav__brand" href="#top" aria-label="OrchardEye home">
+      <span class="mark" aria-hidden="true">
+        <svg viewBox="0 0 32 32" width="28" height="28">
+          <circle cx="16" cy="17" r="10" fill="var(--leaf)"/>
+          <circle cx="16" cy="17" r="10" fill="url(#g)" opacity=".35"/>
+          <path d="M16 7c1-3 4-4 6-4-1 3-3 4-6 4z" fill="var(--leaf-600)"/>
+          <circle cx="16" cy="17" r="4.2" fill="#0f2417"/>
+          <circle cx="16" cy="17" r="1.8" fill="var(--ripe)"/>
+          <defs><radialGradient id="g" cx=".35" cy=".3"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient></defs>
+        </svg>
+      </span>
+      <span class="nav__name">Orchard<b>Eye</b></span>
+    </a>
+    <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navmenu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav__links" id="navmenu" aria-label="Primary">
+      <a href="#problem">Why</a>
+      <a href="#how">How it works</a>
+      <a href="#features">Sensors</a>
+      <a href="#states">States</a>
+      <a href="#targets">Rigor</a>
+    </nav>
+    <a href="#pilot" class="btn btn--sm btn--solid nav__cta">Join the pilot</a>
+  </header>
+
+  <main id="top">
+    <!-- ───────────────────────── Hero ───────────────────────── -->
+    <section class="hero">
+      <div class="hero__glow" aria-hidden="true"></div>
+      <div class="hero__inner">
+        <div class="hero__copy reveal">
+          <span class="eyebrow">Congressional App Challenge · WA-08</span>
+          <h1>One scan.<br /><span class="grad">Two answers.</span></h1>
+          <p class="lede">
+            Point OrchardEye at an apple or leaf. On-device vision tells you if it's
+            <b>diseased</b>. A clip-on NIR sensor tells you if it's <b>ripe</b>.
+            Both fuse into one plain-language verdict you can hear, offline, in the field.
+          </p>
+          <div class="hero__cta">
+            <a href="#pilot" class="btn btn--solid btn--lg">Join the pilot program</a>
+            <a href="#how" class="btn btn--ghost btn--lg">See how it works →</a>
+          </div>
+          <ul class="hero__stats">
+            <li><b>&lt; 3s</b><span>capture → verdict</span></li>
+            <li><b>&lt; $130</b><span>hardware BOM</span></li>
+            <li><b>100%</b><span>offline, on-device</span></li>
+          </ul>
+        </div>
+
+        <!-- Animated scan visual -->
+        <div class="hero__viz reveal" aria-hidden="true">
+          <div class="scanner">
+            <div class="scanner__fruit">🍎</div>
+            <div class="scanner__beam"></div>
+            <div class="scanner__grid"></div>
+          </div>
+          <div class="readout">
+            <div class="readout__row readout__row--disease">
+              <span class="dot dot--green"></span>
+              <span class="readout__label">Disease</span>
+              <span class="readout__val">Healthy · 94%</span>
+            </div>
+            <div class="readout__row readout__row--ripe">
+              <span class="dot dot--amber"></span>
+              <span class="readout__label">Ripeness</span>
+              <span class="readout__val">Peak · 13.2° Brix</span>
+            </div>
+            <div class="readout__verdict">
+              <span class="verdict__emoji">🟢</span>
+              <div>
+                <b>Pick now</b>
+                <small>Prime quality. Harvest this block within 2 days.</small>
+              </div>
+            </div>
+            <div class="spectrum" role="img" aria-label="NIR spectrum, 410 to 940 nanometers">
+              <svg viewBox="0 0 220 56" preserveAspectRatio="none">
+                <path class="spectrum__line" d="M2,44 C40,40 55,10 90,18 S150,50 175,22 205,14 218,20" fill="none"/>
+              </svg>
+              <div class="spectrum__axis"><span>410</span><span>680</span><span>940 nm</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ───────────────────────── Trust strip ───────────────────────── -->
+    <section class="strip">
+      <div class="strip__inner">
+        <span>🍎 Built for apples</span><i>·</i><span>🗺️ All 50 states</span>
+        <i>·</i><span>📶 Works offline</span><i>·</i><span>🔊 Weather-aware voice</span>
+        <i>·</i><span>📈 Season-long trends</span>
+      </div>
+    </section>
+
+    <!-- ───────────────────────── Problem ───────────────────────── -->
+    <section class="section" id="problem">
+      <div class="section__head reveal">
+        <span class="eyebrow">The problem</span>
+        <h2>The hidden cost of guessing when to pick.</h2>
+        <p class="section__sub">
+          Small apple growers lose income at both ends. Apples picked too early
+          grades low; disease caught too late spreads. Today's tools are slow, destructive, or out of reach.
+        </p>
+      </div>
+      <div class="cards cards--3">
+        <article class="pain reveal">
+          <div class="pain__icon">🧪</div>
+          <h3>Manual sampling</h3>
+          <p>You walk the block, crush a few samples, and wait on lab Brix. It's slow, and it still only covers a fraction of the orchard.</p>
+        </article>
+        <article class="pain reveal">
+          <div class="pain__icon">🍇</div>
+          <h3>Destructive testing</h3>
+          <p>A refractometer means squeezing the apple. Every ground-truth reading is a piece of sellable fruit you just destroyed.</p>
+        </article>
+        <article class="pain reveal">
+          <div class="pain__icon">🦠</div>
+          <h3>Disease caught late</h3>
+          <p>Scab, mildew and rot are cheap to stop early and ruinous once they spread. The eye misses the first signs on a busy day.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ───────────────────────── How it works ───────────────────────── -->
+    <section class="section section--tint" id="how">
+      <div class="section__head reveal">
+        <span class="eyebrow">How it works</span>
+        <h2>Two sensors in. One verdict out. Under three seconds.</h2>
+        <p class="section__sub">
+          The camera sees the <em>surface</em>. Near-infrared sees the <em>inside</em>.
+          OrchardEye fuses both on-device, so it works with no signal and no lab.
+        </p>
+      </div>
+
+      <div class="pipeline reveal">
+        <div class="pipe pipe--in">
+          <div class="pipe__node">📷<span>Camera</span></div>
+          <div class="pipe__node">🔬<span>NIR sensor</span></div>
+        </div>
+        <div class="pipe__arrow">→</div>
+        <div class="pipe__node pipe__node--proc">🚦<span>Quality gate</span></div>
+        <div class="pipe__arrow">→</div>
+        <div class="pipe__node pipe__node--proc">🧠<span>On-device models</span></div>
+        <div class="pipe__arrow">→</div>
+        <div class="pipe__node pipe__node--fuse">🔀<span>Fusion</span></div>
+        <div class="pipe__arrow">→</div>
+        <div class="pipe pipe--out">
+          <div class="pipe__node pipe__node--out">🟢<span>Verdict</span></div>
+          <div class="pipe__node pipe__node--out">🔊<span>Voice</span></div>
+          <div class="pipe__node pipe__node--out">📈<span>Trend</span></div>
+        </div>
+      </div>
+      <p class="pipeline__note reveal">Everything above runs on the phone. No cloud round-trip, no dead-zone failures.</p>
+    </section>
+
+    <!-- ───────────────────────── Statement band ───────────────────────── -->
+    <section class="statement">
+      <p class="statement__eyebrow reveal">The shift</p>
+      <p class="statement__line reveal">Ripeness and disease belong <em>in the field</em>, not the lab.</p>
+    </section>
+
+    <!-- ───────────────────────── Features ───────────────────────── -->
+    <section class="section" id="features">
+      <div class="section__head reveal">
+        <span class="eyebrow">Powered by two sensors</span>
+        <h2>A $3,000 lab capability in a $100 phone attachment.</h2>
+      </div>
+      <div class="cards cards--2">
+        <article class="feat reveal">
+          <div class="feat__icon feat__icon--green">🦠</div>
+          <h3>On-device disease vision</h3>
+          <p>A quantized CV model classifies visible disease (or "healthy"), plus a crop-health score from greenness, lesion and chlorosis signals. No connection needed.</p>
+        </article>
+        <article class="feat reveal">
+          <div class="feat__icon feat__icon--amber">🔬</div>
+          <h3>NIR ripeness &amp; Brix</h3>
+          <p>An 18-channel spectral sensor (410–940 nm) reads internal quality the camera can't see, estimating ripeness stage and sugar in °Brix.</p>
+        </article>
+        <article class="feat reveal">
+          <div class="feat__icon feat__icon--green">🔀</div>
+          <h3>One fused verdict, spoken</h3>
+          <p>Surface and internal readings combine into a single 🟢/🟠/🔴 call with plain-language advice, read aloud with weather-aware guidance, hands-free.</p>
+        </article>
+        <article class="feat reveal">
+          <div class="feat__icon feat__icon--amber">📈</div>
+          <h3>Trends that learn your block</h3>
+          <p>Tag a plant or block and re-scan across the season to watch ripening curves and disease risk. Confirm or correct each call to train it for your orchard.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ───────────────────────── Built for ───────────────────────── -->
+    <section class="section section--tint" id="growers">
+      <div class="section__head reveal">
+        <span class="eyebrow">Built for those who grow</span>
+        <h2>For the small growers who power WA-08.</h2>
+        <p class="section__sub">Wenatchee, Chelan, Leavenworth: the heart of America's apple country.</p>
+      </div>
+      <div class="cards cards--3">
+        <article class="who reveal"><h3>🍎 Apple growers</h3><p>Pick at peak quality, catch scab and mildew early, and turn today's waste into graded income.</p></article>
+        <article class="who reveal"><h3>🧺 Packers &amp; fieldmen</h3><p>Tight harvest windows and storage decisions. Exactly where a fast, non-destructive ripeness read pays off.</p></article>
+        <article class="who reveal"><h3>🌱 Small &amp; specialty farms</h3><p>Sub-$130 hardware puts field-grade quality data in reach without a lab budget or a data plan.</p></article>
+      </div>
+    </section>
+
+    <!-- ───────────────────────── States ───────────────────────── -->
+    <section class="section" id="states">
+      <div class="section__head reveal">
+        <h2>Apple health, state by state.</h2>
+        <p class="section__sub">Every scan feeds a season-long picture of disease pressure and ripeness across U.S. orchards. Pick a state to see its numbers.</p>
+      </div>
+      <div class="usmap reveal">
+        <div class="usmap__left">
+          <div class="usmap__tabs" role="tablist" aria-label="Map metric">
+            <button type="button" role="tab" data-metric="scans" aria-selected="true">Apples scanned</button>
+            <button type="button" role="tab" data-metric="disease" aria-selected="false">Disease found</button>
+            <button type="button" role="tab" data-metric="brix" aria-selected="false">Average Brix</button>
+          </div>
+          <div class="usmap__grid" id="usGrid"></div>
+          <div class="usmap__legend"><span id="legLo"></span><i id="legBar"></i><span id="legHi"></span></div>
+        </div>
+        <aside class="usmap__card" id="stateCard" aria-live="polite"></aside>
+      </div>
+      <div class="usmap__totals reveal" id="usTotals"></div>
+    </section>
+
+    <!-- ───────────────────────── Rigor / targets ───────────────────────── -->
+    <section class="section" id="targets">
+      <div class="section__head reveal">
+        <span class="eyebrow">Honest by design</span>
+        <h2>Rigor is the point.</h2>
+        <p class="section__sub">
+          The AS7265x tops out near 940 nm, which is great for ripeness, chlorophyll and surface chemistry.
+          We <b>don't</b> claim deep 1450 nm sugar/water bands that need far pricier sensors. Here are the v1 targets we hold ourselves to.
+        </p>
+      </div>
+
+      <div class="targets reveal">
+        <div class="target"><b>≥ 90%</b><span>Disease accuracy (public test set)</span></div>
+        <div class="target"><b>≥ 75%</b><span>Disease accuracy (own field photos)</span></div>
+        <div class="target"><b>≥ 85%</b><span>Ripeness classification</span></div>
+        <div class="target"><b>R² ≥ 0.80</b><span>Brix regression · RMSE ≈ 1°</span></div>
+        <div class="target"><b>&lt; 3s</b><span>Capture → verdict, on-device</span></div>
+        <div class="target"><b>&lt; $130</b><span>Hardware bill of materials</span></div>
+      </div>
+
+      <div class="bom reveal">
+        <h4>~$118 bill of materials</h4>
+        <p>AS7265x spectral sensor (18 ch, 410–940 nm) · ESP32 BLE bridge · Brix refractometer for ground truth · 3D-printed dark shroud.</p>
+      </div>
+    </section>
+
+    <!-- ───────────────────────── Pilot CTA ───────────────────────── -->
+    <section class="pilot" id="pilot">
+      <div class="pilot__inner reveal">
+        <span class="eyebrow eyebrow--light">Join the pilot program</span>
+        <h2>Put a lab in your pocket this season.</h2>
+        <p>We're partnering with a small group of WA-08 apple growers to field-test OrchardEye. Bring your orchard, we'll bring the sensor.</p>
+
+        <!-- Static-host friendly: JS composes a mailto on submit. To collect
+             online instead, set data-endpoint to a Formspree/Basin URL. -->
+        <form class="pilot__form reveal" id="pilotForm" data-endpoint="" data-mailto="ruchiagrawal9221@gmail.com" novalidate>
+          <div class="field">
+            <label for="pf-name">Name</label>
+            <input id="pf-name" name="name" type="text" autocomplete="name" required />
+          </div>
+          <div class="field">
+            <label for="pf-email">Email</label>
+            <input id="pf-email" name="email" type="email" autocomplete="email" required />
+          </div>
+          <div class="field field--wide">
+            <label for="pf-orchard">Orchard &amp; location</label>
+            <input id="pf-orchard" name="orchard" type="text" placeholder="e.g. 20 acres Honeycrisp, Wenatchee" />
+          </div>
+          <div class="field field--wide">
+            <label for="pf-msg">What would you want to test?</label>
+            <textarea id="pf-msg" name="message" rows="3"></textarea>
+          </div>
+          <div class="pilot__actions field--wide">
+            <button type="submit" class="btn btn--solid btn--lg">Apply to the pilot</button>
+            <a href="https://github.com/aranyoray/OrchardEye" class="btn btn--ghost btn--lg btn--onlight">View the project →</a>
+          </div>
+          <p class="pilot__status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ───────────────────────── Footer ───────────────────────── -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <span class="nav__name">Orchard<b>Eye</b></span>
+        <p>A dual-sensor apple health &amp; quality scanner for Washington's 8th Congressional District.</p>
+      </div>
+      <nav class="footer__links" aria-label="Footer">
+        <a href="#problem">Why</a>
+        <a href="#how">How it works</a>
+        <a href="#features">Sensors</a>
+        <a href="#states">States</a>
+        <a href="#pilot">Pilot</a>
+        <a href="support.html">Support</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="https://github.com/aranyoray/OrchardEye">GitHub</a>
+      </nav>
+    </div>
+    <p class="footer__fine">OrchardEye © 2026 · Built for the Congressional App Challenge (WA-08). Working name, still a placeholder. Verify current CAC deadlines and district boundaries before submission.</p>
+  </footer>
+
+  <script src="states-data.js" defer></script>
+  <script src="main.js" defer></script>
+</body>
+</html>

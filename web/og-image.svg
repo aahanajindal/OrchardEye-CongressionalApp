@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" font-family="Sora, system-ui, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f2417"/>
+      <stop offset="1" stop-color="#1d3d28"/>
+    </linearGradient>
+    <radialGradient id="glow" cx=".8" cy=".2" r=".6">
+      <stop offset="0" stop-color="#f4a62a" stop-opacity=".28"/>
+      <stop offset="1" stop-color="#f4a62a" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+
+  <!-- mark -->
+  <g transform="translate(90,86)">
+    <circle cx="26" cy="30" r="26" fill="#34a853"/>
+    <path d="M26 3c3-8 10-11 16-11-3 8-8 11-16 11z" fill="#2f7d3e"/>
+    <circle cx="26" cy="30" r="10" fill="#0f2417"/>
+    <circle cx="26" cy="30" r="4" fill="#f4a62a"/>
+    <text x="72" y="42" fill="#eafff0" font-size="34" font-weight="600">Orchard<tspan fill="#34a853" font-weight="800">Eye</tspan></text>
+  </g>
+
+  <text x="90" y="300" fill="#eafff0" font-size="98" font-weight="800">One scan.</text>
+  <text x="90" y="410" font-size="98" font-weight="800" fill="#34a853">Two answers.</text>
+  <text x="92" y="482" fill="#bfe0cb" font-size="30" font-weight="400" font-family="Inter, sans-serif">Disease + ripeness in one offline verdict, on sub-$130 hardware.</text>
+
+  <g font-family="Inter, sans-serif" font-size="24" font-weight="600" fill="#cde6d6">
+    <text x="92" y="560">&lt; 3s verdict</text>
+    <text x="290" y="560" fill="#3c6b4d">·</text>
+    <text x="320" y="560">&lt; $130 BOM</text>
+    <text x="520" y="560" fill="#3c6b4d">·</text>
+    <text x="550" y="560">100% offline</text>
+    <text x="770" y="560" fill="#3c6b4d">·</text>
+    <text x="800" y="560">WA-08</text>
+  </g>
+</svg>

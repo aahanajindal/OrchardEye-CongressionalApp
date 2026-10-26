@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Support · OrchardEye</title>
+  <meta name="description" content="Get help with OrchardEye — setup, pairing the spectral sensor, scanning tips, troubleshooting, and how to reach us. Response within two business days." />
+  <meta name="theme-color" content="#0f2417" />
+  <meta name="robots" content="index, follow" />
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;450;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+  <!-- ───────────────────────── Nav ───────────────────────── -->
+  <header class="nav" id="nav">
+    <a class="nav__brand" href="index.html#top" aria-label="OrchardEye home">
+      <span class="mark" aria-hidden="true">
+        <svg viewBox="0 0 32 32" width="28" height="28">
+          <circle cx="16" cy="17" r="10" fill="var(--leaf)"/>
+          <circle cx="16" cy="17" r="10" fill="url(#g)" opacity=".35"/>
+          <path d="M16 7c1-3 4-4 6-4-1 3-3 4-6 4z" fill="var(--leaf-600)"/>
+          <circle cx="16" cy="17" r="4.2" fill="#0f2417"/>
+          <circle cx="16" cy="17" r="1.8" fill="var(--ripe)"/>
+          <defs><radialGradient id="g" cx=".35" cy=".3"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient></defs>
+        </svg>
+      </span>
+      <span class="nav__name">Orchard<b>Eye</b></span>
+    </a>
+    <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navmenu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav__links" id="navmenu" aria-label="Primary">
+      <a href="index.html#how">How it works</a>
+      <a href="index.html#features">Sensors</a>
+      <a href="privacy.html">Privacy</a>
+    </nav>
+    <a href="index.html#pilot" class="btn btn--sm btn--solid nav__cta">Join the pilot</a>
+  </header>
+
+  <main id="top">
+    <article class="legal">
+      <span class="legal__eyebrow">Support</span>
+      <h1>Help &amp; support</h1>
+      <p class="legal__lede">Whether you're setting up the sensor for the first time or a scan isn't behaving, we're here. Most answers are below — and a real person reads every email.</p>
+
+      <div class="legal__contact">
+        <h2>Contact us</h2>
+        <p>Email <a href="mailto:ruchiagrawal9221@gmail.com">ruchiagrawal9221@gmail.com</a> and we'll get back to you within <strong>two business days</strong>. Including your device model, iOS version, and a short description of what happened helps us help you faster.</p>
+      </div>
+
+      <h2>Getting started</h2>
+      <h3>1. Scan an apple or a leaf</h3>
+      <p>Open the app, point the camera at the apple or foliage, and hold steady in even light. OrchardEye reads color, greenness, and lesions on-device and returns a plain-language verdict — no internet required.</p>
+
+      <h3>2. (Optional) Pair the spectral sensor</h3>
+      <p>The OrchardEye NIR sensor adds ripeness and Brix readings. Power it on, then allow Bluetooth when the app asks. Once paired, a scan fuses the camera and sensor into a single verdict.</p>
+
+      <h3>3. Review trends</h3>
+      <p>Saved scans build a history so you can watch ripeness and disease pressure change across the season — all stored on your device.</p>
+
+      <h2>Frequently asked questions</h2>
+
+      <h3>Does OrchardEye work without internet?</h3>
+      <p>Yes. Scanning, analysis, and voice guidance all run offline on your phone. The only feature that uses the network is optional local weather, and the app falls back to cached and default data when you're off-grid.</p>
+
+      <h3>The sensor won't connect over Bluetooth.</h3>
+      <p>Make sure the sensor is powered and within a few feet, that Bluetooth is enabled in iOS Settings, and that you granted OrchardEye Bluetooth permission (Settings → OrchardEye). Toggling the sensor off and on, then re-opening the app, resolves most pairing hiccups.</p>
+
+      <h3>Why does the app ask for my location?</h3>
+      <p>Only to fetch local weather for better spray-timing and disease-pressure guidance. It's optional — decline it and everything else keeps working. See our <a href="privacy.html">Privacy Policy</a> for details.</p>
+
+      <h3>My scan verdict seems off.</h3>
+      <p>Lighting matters. Scan in even, natural light, fill the frame with the apple or leaf, and avoid deep shadows or glare. If you're using the sensor, keep it flush against the fruit inside its dark shroud so ambient light doesn't skew the reading.</p>
+
+      <h3>Where are my scans stored? Can I delete them?</h3>
+      <p>On your device. Delete an individual scan from the in-app history, or remove the app to erase all of its data. We keep no server-side copy.</p>
+
+      <h3>Is my data private?</h3>
+      <p>Yes — scans are analyzed on-device, there are no accounts, and we don't sell data or run ad/analytics trackers. Full details are in our <a href="privacy.html">Privacy Policy</a>.</p>
+
+      <h3>What hardware do I need?</h3>
+      <p>Just an iPhone for camera-based scanning. For ripeness and Brix, the optional OrchardEye sensor kit (AS7265x spectral sensor, ESP32 BLE bridge, refractometer, 3D-printed shroud) runs roughly $118 in parts.</p>
+
+      <h2>Report a bug or request a feature</h2>
+      <p>Found something broken or have an idea? Email <a href="mailto:ruchiagrawal9221@gmail.com">ruchiagrawal9221@gmail.com</a> with the details, or open an issue on our <a href="https://github.com/aranyoray/OrchardEye">GitHub project</a>.</p>
+
+      <a class="legal__back" href="index.html">← Back to OrchardEye</a>
+    </article>
+  </main>
+
+  <!-- ───────────────────────── Footer ───────────────────────── -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <span class="nav__name">Orchard<b>Eye</b></span>
+        <p>A dual-sensor apple health &amp; quality scanner for Washington's 8th Congressional District.</p>
+      </div>
+      <nav class="footer__links" aria-label="Footer">
+        <a href="index.html#how">How it works</a>
+        <a href="index.html#features">Sensors</a>
+        <a href="support.html">Support</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="https://github.com/aranyoray/OrchardEye">GitHub</a>
+      </nav>
+    </div>
+    <p class="footer__fine">OrchardEye © 2026 · Built for the Congressional App Challenge (WA-08). Contact: <a href="mailto:ruchiagrawal9221@gmail.com">ruchiagrawal9221@gmail.com</a></p>
+  </footer>
+
+  <script src="main.js" defer></script>
+</body>
+</html>
